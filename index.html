@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cenova</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500&display=swap"
+</head>
+
+<body>
+
+<header>
+<a href="index.html" class="logo">
+<img src="images/cenova-logo8.png" alt="Cenova Logo">
+</a>
+
+<nav>
+<ul>
+<li><a href="index.html" class="active">Home</a></li>
+<li><a href="shop.html">Shop</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+
+</header>
+
+
+<main>
+
+<section class="hero">
+
+<div class="hero-overlay">
+<h1 id="heroTitle">Bookshelf</h1>
+
+<div class="hero-menu">
+<span class="active">Bookshelf</span>
+<span>Accent Chair</span>
+<span>C-Shaped Table</span>
+<span>Minimal Clock</span>
+</div>
+
+<a href="products" class="discover-btn">DISCOVER MORE</a>
+
+</div>
+
+<button class="nav prev">‹</button>
+<button class="nav next">›</button>
+
+</section>
+
+<script>
+
+const hero = document.querySelector(".hero");
+
+const images = [
+"images/house.jpg",
+"images/chair.jpg",
+"images/c-shaped-table.jpg",
+"images/clock.jpg"
+];
+
+const titles = [
+"Bookshelf",
+"Accent Chair",
+"C-Shaped Table",
+"Minimal Clock"
+];
+
+let current = 0;
+
+function updateSlide(){
+
+/* CHANGE BACKGROUND IMAGE */
+hero.style.backgroundImage = `url(${images[current]})`;
+
+/* update title */
+document.getElementById("heroTitle").innerText = titles[current];
+
+/* update active menu */
+document.querySelectorAll(".hero-menu span").forEach((el,i)=>{
+el.classList.toggle("active", i === current);
+});
+
+}
+
+/* NEXT BUTTON */
+function nextSlide(){
+current = (current + 1) % images.length;
+updateSlide();
+}
+
+/* PREVIOUS BUTTON */
+function prevSlide(){
+current = (current - 1 + images.length) % images.length;
+updateSlide();
+}
+
+/* BUTTON EVENTS */
+document.querySelector(".next").addEventListener("click", nextSlide);
+document.querySelector(".prev").addEventListener("click", prevSlide);
+
+/* AUTO SLIDE */
+setInterval(nextSlide, 4000);
+</script>
+
+<!-- Featured Products -->
+<div class="product-card">
+  <img src="images/house.jpg" alt="Modern Bookshelf">
+
+  <div class="product-info">
+    <h3>Modern Bookshelf</h3>
+    <p class="price">₹3,999</p>
+
+    <div class="product-buttons">
+      <a href="house.jpg" class="btn-outline">View Details</a>
+      <a href="#" class="btn-filled">Buy on Amazon</a>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="product-card">
+<img src="images/clock.jpg" alt="Minimal Wall Clock">
+<h3>Minimal Wall Clock</h3>
+<p>₹1,499</p>
+
+<div class="product-buttons">
+<a href="clock.html" class="details-button">View Details</a>
+<a href="#" class="amazon-button">Buy on Amazon</a>
+</div>
+</div>
+
+<div class="product-card">
+<img src="images/c-shaped-table.jpg" alt="C-Shaped Table">
+<h3>C-Shaped Side Table</h3>
+<p>₹2,499</p>
+
+<div class="product-buttons">
+<a href="table.html" class="details-button">View Details</a>
+<a href="#" class="amazon-button">Buy on Amazon</a>
+</div>
+</div>
+
+<div class="product-card">
+<img src="images/chair.jpg" alt="Accent Chair">
+<h3>Accent Chair</h3>
+<p>₹4,999</p>
+
+<div class="product-buttons">
+<a href="bookshelf.html" class="details-button">View Details</a>
+<a href="https://amazon.in" class="amazon-button">Buy on Amazon</a>
+</div>
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- Customer Favorite Poll -->
+<section id="customer-favorite">
+
+<h2>Customer Favorite</h2>
+<p>Which Cenova product do you like the most?</p>
+
+<form>
+
+
+
+<div class="product-grid">
+
+<div class="product-card">
+<img src="images/bookshelf.jpg" alt="Modern Bookshelf">
+<h3>Modern Bookshelf</h3>
+<p>₹3,999</p>
+<a href="bookshelf.html" class="amazon-button">View Product</a>
+</div>
+
+<div class="product-card">
+<img src="images/clock.jpg" alt="Minimal Wall Clock">
+<h3>Minimal Wall Clock</h3>
+<p>₹1,499</p>
+<a href="#" class="amazon-button">Buy on Amazon</a>
+</div>
+
+<div class="product-card">
+<img src="images/c-shaped-table.jpg" alt="C-Shaped Table">
+<h3>C-Shaped Side Table</h3>
+<p>₹2,499</p>
+<a href="#" class="amazon-button">Buy on Amazon</a>
+</div>
+
+<div class="product-card">
+<img src="images/chair.jpg" alt="Accent Chair">
+<h3>Accent Chair</h3>
+<p>₹4,999</p>
+<a href="#" class="amazon-button">Buy on Amazon</a>
+</div>
+
+</div>
+
+
+<button type="submit">Vote</button>
+
+</form>
+
+</section>
+
+
+
+
+<!-- Future Product Poll -->
+<section id="future-products">
+
+<h2>Help Us Decide Our Next Product</h2>
+<p>Vote for the furniture design you want us to launch next.</p>
+
+<form>
+
+<div class="product-grid">
+
+<label class="product-card">
+<input type="radio" name="future-product" value="recliner-sofa">
+<img src="images/recliner.jpg" alt="Recliner Sofa">
+<p>Recliner Sofa</p>
+</label>
+
+<label class="product-card">
+<input type="radio" name="future-product" value="storage-bed">
+<img src="images/storage-bed.jpg" alt="Storage Bed">
+<p>Storage Bed</p>
+</label>
+
+<label class="product-card">
+<input type="radio" name="future-product" value="accent-chair">
+<img src="images/accent-chair.jpg" alt="Accent Chair">
+<p>Accent Chair</p>
+</label>
+
+<label class="product-card">
+<input type="radio" name="future-product" value="coffee-table">
+<img src="images/coffee-table.jpg" alt="Coffee Table">
+<p>Coffee Table</p>
+</label>
+
+</div>
+
+<button type="submit">Submit Vote</button>
+
+<h3>Would you like to be notified when this product launches?</h3>
+
+<label>
+<input type="radio" name="notify" value="yes">
+Yes, notify me
+</label>
+
+<label>
+<input type="radio" name="notify" value="no">
+No thanks
+</label>
+
+<br><br>
+
+<label>Email (optional)</label>
+<input type="email" placeholder="Enter your email">
+
+</form>
+
+</section>
+
+
+<!-- Contact Form -->
+<section class="contact-section">
+
+  <div class="contact-container">
+
+    <!-- LEFT SIDE -->
+    <div class="contact-info">
+      <h2>Get in Touch</h2>
+      <p>We’d love to hear from you. Whether it’s a question about products or custom furniture, our team is ready to help.</p>
+
+      <div class="contact-details">
+        <p>📍 Bengaluru, India</p>
+        <p>📧 support@cenova.com</p>
+        <p>📞 +91 9663852777</p>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name">
+      <input type="email" placeholder="Your Email">
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+  </div>
+
+</section>
+
+
+</main>
+<script src="script.js"></script>
+
+<footer>
+<p>© 2026 Cenova. All rights reserved.</p>
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Bookshelf | Cenova</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<body>
+
+<header>
+
+<a href="index.html" class="logo">
+<img src="images/cenova-logo6.png" alt="Cenova Logo">
+</a>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="#">Shop</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</nav>
+
+</header>
+
+
+<main>
+
+<section class="product-page">
+
+<div class="product-gallery">
+
+<div class="thumbnail-images">
+
+<img class="thumbnail" src="images/bookshelf.jpg" alt="Bookshelf view 1">
+<img class="thumbnail" src="images/bookshelf.jpg" alt="Bookshelf view 2">
+<img class="thumbnail" src="images/bookshelf.jpg" alt="Bookshelf view 3">
+<img class="thumbnail" src="images/house" alt="Bookshelf view 4">
+
+</div>
+
+<div class="main-image">
+<img id="mainProductImage" src="images/house" alt="Modern Bookshelf">
+</div>
+
+</div>
+
+
+<div class="product-details">
+
+<h2>Modern Bookshelf</h2>
+
+<p class="price">₹3,999</p>
+
+<p>
+A minimal modern bookshelf designed for contemporary homes.
+Perfect for storing books, decor items, and daily essentials.
+Crafted with durable engineered wood and a premium finish.
+</p>
+
+<a href="https://amazon.in" class="amazon-button">Buy on Amazon</a>
+
+</div>
+
+</section>
+
+</section>
+
+<nav class="breadcrumb">
+
+<a href="index.html">Home</a>
+
+<span> </span>
+
+<a href="#">Furniture</a>
+
+<span></span>
+
+<span>Bookshelf</span>
+
+</nav>
+
+</main>
+
+<script>
+
+const mainImage = document.getElementById("mainProductImage");
+
+const thumbnails = document.querySelectorAll(".thumbnail");
+
+thumbnails.forEach(function(thumbnail){
+
+thumbnail.addEventListener("click", function(){
+
+mainImage.src = this.src;
+console.log("JS working");
+
+});
+
+});
+
+</script>
+
+<section class="product-info">
+
+<div class="features">
+
+<h3>Key Features</h3>
+
+<ul>
+<li>Minimal modern design</li>
+<li>Durable engineered wood construction</li>
+<li>Perfect for books and decorative items</li>
+<li>Compact design suitable for small spaces</li>
+</ul>
+
+</div>
+
+<div class="specifications">
+
+<h3>Specifications</h3>
+
+<p><strong>Material:</strong> Engineered Wood</p>
+<p><strong>Color:</strong> Walnut Brown</p>
+<p><strong>Dimensions:</strong> 120cm × 30cm × 180cm</p>
+<p><strong>Weight Capacity:</strong> 20kg per shelf</p>
+
+</div>
+
+</section>
+
+
+<section class="related-products">
+
+<h2>You May Also Like</h2>
+
+<div class="product-grid">
+
+<div class="product-card">
+
+<img src="images/clock.jpg" alt="Wall Clock">
+
+<h3>Minimal Wall Clock</h3>
+
+<a href="clock.html" class="details-button">View Details</a>
+
+</div>
+
+<div class="product-card">
+
+<img src="images/chair.jpg" alt="Accent Chair">
+
+<h3>Accent Chair</h3>
+
+<a href="chair.html" class="details-button">View Details</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<footer>
+
+<p>© 2026 Cenova. All rights reserved.</p>
+
+</footer>
+
+</body>
+
+</html>
+    
+

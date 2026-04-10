@@ -1,0 +1,1044 @@
+/* Brand color variables
+   These colors will be used across the whole website */
+
+/* =============================
+   CENOVA BRAND COLORS
+   Used across the entire site
+   ============================= */
+:root{
+--bg: #F5F3EF;
+--text: #1a1a1a;
+--accent: #b89b72;
+}
+/* Styles the entire page
+   HTML affected: <body> */
+
+body {
+
+margin: 0;
+font-family: 'Playfair Display', serif;
+background-color: var(--cenova-background);
+color: var(--cenova-primary);
+
+}
+
+
+/* =============================
+   HEADER
+   HTML affected: <header>
+   ============================= */
+
+/* HEADER LAYOUT
+   HTML affected: <header> */
+
+header{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:20px 60px;
+background:white;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+header{
+padding:20px 60px;
+}
+
+/* Adds a shadow to the header
+   HTML affected: <header> */
+
+header {
+box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+
+
+
+
+/* Styles the logo text
+   HTML affected: <h1>Cenova</h1> */
+
+header h1 {
+
+color: var(--cenova-primary);
+/* =============================
+   LOGO
+   HTML affected: <h1> inside header
+   ============================= */
+
+.hero h1{
+font-size:90px;
+font-weight:300;
+letter-spacing:2px;
+}
+}
+/* Navigation section */
+
+/* =============================
+   NAVIGATION LIST
+   HTML affected: <ul> inside nav
+   ============================= */
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+margin:0;
+padding:0;
+}
+
+/* Styles navigation links
+   HTML affected: <nav> links */
+
+/* =============================
+   NAVIGATION LINKS
+   HTML affected: <a> inside nav
+   ============================= */
+
+nav a{
+text-decoration:none;
+color:var(--cenova-primary);
+font-weight:500;
+
+}
+
+.nav{
+background:rgba(255,255,255,0.3);
+backdrop-filter: blur(5px);
+}
+
+
+
+
+
+/* Hover effect */
+
+
+nav a:hover{
+color:var(--cenova-accent);
+}
+
+/* Sections */
+section{
+padding:100px 80px;
+}
+
+
+/* Product grid layout
+   HTML affected: <div class="product-grid"> */
+
+.product-grid {
+
+display: grid;
+
+/* automatically creates responsive columns */
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+gap: 30px;
+
+margin-top: 40px;
+
+}
+
+
+/* Product Card */
+.product-card {
+  width: 300px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+/* Product card styling
+   HTML affected: <div class="product-card"> */
+
+.product-card{
+
+background-color:white;
+
+padding:25px;
+
+border-radius:10px;
+
+border:none;
+
+text-align:center;
+
+box-shadow:0 6px 16px rgba(0,0,0,0.08);
+
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:space-between;
+
+}
+
+/* PRODUCT CARD HOVER EFFECT
+   HTML affected: <div class="product-card"> */
+
+.product-card{
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* Hover animation
+   HTML affected: <div class="product-card"> */
+
+.product-card:hover{
+transform: translateY(-8px);
+box-shadow: 0 14px 28px rgba(0,0,0,0.15);
+}
+
+/* Product images
+   HTML affected: <img> inside product-card */
+
+/* Image */
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.product-card img{
+transition: transform 0.3s ease;
+}
+
+/* Zoom image when hovering card */
+
+.product-card:hover img{
+transform: scale(1.05);
+}
+
+/* =================================
+   PRODUCT TITLE
+   HTML affected: <h3> inside product-card
+   ================================= */
+
+.product-card h3 {
+
+margin-bottom: 10px;
+
+font-size: 18px;
+
+}
+
+/* =================================
+   PRODUCT TITLE
+   HTML affected: <h3> inside product-card
+   ================================= */
+
+.product-card h3 {
+
+margin-bottom: 10px;
+
+font-size: 18px;
+
+}
+
+.product-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  background: #f9f9f9; /* fills empty space nicely */
+}
+
+
+/* Styles buy buttons
+   HTML affected: <a class="amazon-button"> */
+
+.amazon-button{
+background:none;
+border:1px solid var(--accent);
+color:var(--text);
+padding:10px 20px;
+}
+
+
+/* Buttons */
+.product-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.btn-outline {
+  border: 1px solid #B79562;
+  padding: 8px 14px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 13px;
+}
+
+.btn-filled {
+  background: #B79562;
+  color: white;
+  padding: 8px 14px;
+  text-decoration: none;
+  font-size: 13px;
+}
+/* VIEW DETAILS (minimal outline style) */
+.details-button{
+padding: 6px 12px;              /* 🔥 smaller */
+font-size: 12px;                /* 🔥 reduced */
+border: 1px solid #B79562;
+color: #15253F;
+text-decoration: none;
+border-radius: 3px;             /* less rounded */
+transition: all 0.3s ease;
+}
+
+/* HOVER */
+.details-button:hover{
+background-color: #B79562;
+color: white;
+}
+
+
+
+
+/* Button hover effect */
+
+.amazon-button:hover {
+
+background-color: var(--cenova-accent);
+color: var(--cenova-primary);
+opacity: 0.85;
+}
+
+/* =================================
+   AMAZON BUTTON
+   HTML affected: <a class="amazon-button">
+   ================================= */
+
+/* Buy button
+   HTML affected: <a class="amazon-button"> */
+
+/* BUY BUTTON (subtle filled) */
+.amazon-button{
+padding: 6px 12px;              /* 🔥 smaller */
+font-size: 12px;
+background-color: #B79562;
+color: white;
+text-decoration: none;
+border-radius: 3px;
+transition: all 0.3s ease;
+}
+
+.amazon-button{
+background: transparent;
+border: 1px solid #B79562;
+color: #15253F;
+}
+
+/* Form Buttons */
+button {
+    margin-top: 15px;
+    padding: 10px 16px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border-top: 1px solid #ddd;
+}
+
+
+/* Header Layout */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Navigation List */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+
+.product-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    border-radius: 6px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+
+.product-card input[type="radio"] {
+    display: none;
+}
+
+
+.product-card input[type="radio"]:checked + img {
+    outline: 3px solid #ff9900;
+}
+
+
+
+/* Hero Section */
+
+/* HERO SECTION
+   HTML affected: <section id="hero"> */
+
+/* HERO SECTION */
+
+.hero{
+height: 85vh;
+position: relative;
+
+background-image: url("images/house");
+
+/* 🔥 THESE 3 LINES FIX YOUR ISSUE */
+background-size: cover;        /* prevents repetition */
+background-position: center;   /* centers image */
+background-repeat: no-repeat;  /* stops tiling */
+
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+/* DARK OVERLAY (for readability) */
+.hero::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background: rgba(0,0,0,0.35);
+}
+
+/* CONTENT CENTER */
+.hero-overlay{
+position: relative;
+text-align: center;
+color: white;
+}
+
+/* BIG TITLE */
+.hero h1{
+font-size: 80px;
+font-weight: 300;
+letter-spacing: 2px;
+margin-bottom: 40px;
+}
+
+/* MENU */
+.hero-menu{
+display:flex;
+gap:40px;
+justify-content:center;
+margin-bottom:30px;
+}
+
+.hero-menu span{
+cursor:pointer;
+opacity:0.6;
+border-bottom:2px solid transparent;
+padding-bottom:5px;
+transition:0.3s;
+}
+
+.hero-menu span.active{
+opacity:1;
+border-color: #B79562;
+}
+
+/* BUTTON */
+.discover-btn{
+padding:12px 30px;
+border:1px solid #B79562;
+text-decoration:none;
+color:white;
+letter-spacing:1px;
+transition:0.3s;
+}
+
+.discover-btn:hover{
+background:#B79562;
+color:black;
+}
+
+/* NAVIGATION ARROWS */
+.nav{
+
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+
+/* size */
+width: 50px;
+height: 50px;
+
+/* center arrow */
+display: flex;
+align-items: center;
+justify-content: center;
+
+/* style */
+font-size: 22px;
+color: white;
+
+/* premium glass effect */
+background: rgba(255,255,255,0.2);
+backdrop-filter: blur(6px);
+
+/* shape */
+border-radius: 50%;
+border: none;
+
+cursor: pointer;
+
+/* smooth effect */
+transition: all 0.3s ease;
+}
+
+/* positions */
+.prev{
+left: 30px;
+}
+
+.next{
+right: 30px;
+}
+
+/* hover effect */
+.nav:hover{
+background: #B79562;
+color: black;
+transform: translateY(-50%) scale(1.1);
+}
+
+
+
+
+/* Responsive layout for smaller screens (phones & tablets)
+   This affects the product cards inside:
+   HTML: <div class="product-grid"> */
+
+@media (max-width: 768px) {
+
+.product-grid {
+grid-template-columns: 1fr;   /* Shows one product per row instead of two */
+}
+
+}
+
+
+/* Responsive layout for the "Why Cenova" cards
+   HTML: <div class="about-grid"> */
+
+@media (max-width: 768px) {
+
+.about-grid {
+grid-template-columns: 1fr;   /* Shows one card per row */
+}
+
+}
+
+
+/* Responsive layout for Explore Collections
+   HTML: <div class="collection-grid"> */
+
+@media (max-width: 768px) {
+
+.collection-grid {
+grid-template-columns: 1fr;   /* Shows one category per row */
+}
+
+}
+/* This styles each product card
+   HTML affected: <div class="product-card"> */
+
+/* PRODUCT CARD */
+
+.product-card{
+
+background:white;
+
+padding:25px;
+
+border-radius:10px;
+
+border:1px solid #ddd;
+
+text-align:center;
+
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
+
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+
+/* This activates when user hovers the product card
+   HTML affected: <div class="product-card"> */
+
+.product-card:hover{
+
+transform: translateY(-8px);
+
+box-shadow:0 14px 28px rgba(0,0,0,0.15);
+
+}
+
+/* This styles images inside product cards
+   HTML affected: <img> inside <div class="product-card"> */
+
+.product-card img{
+
+width:100%;
+
+border-radius:8px;
+
+transition: transform 0.3s ease;
+
+}
+
+
+/* When hovering the card, zoom the image slightly
+   HTML affected: <img> inside <div class="product-card"> */
+
+.product-card:hover img{
+
+transform: scale(1.05);
+
+}
+
+
+/* Styles About page section
+   HTML affected: <section id="about-page"> */
+
+#about-page {
+
+padding: 60px 40px;
+text-align: center;
+
+}
+
+
+/* Styles paragraphs inside About page */
+
+#about-page p {
+
+max-width: 700px;
+margin: 15px auto;
+line-height: 1.6;
+
+}
+
+/* Active section */
+
+/* =============================
+   ACTIVE PAGE
+   HTML affected: <a class="active">
+   ============================= */
+
+nav a.active {
+
+color: var(--cenova-accent);
+
+font-weight: 600;
+
+}
+
+/* Placeholder style when image is missing
+   HTML affected: <img> inside .product-card */
+
+.product-card img {
+
+width: 100%;
+height: 220px;
+
+object-fit: cover;
+
+border-radius: 8px;
+
+margin-bottom: 18px;
+}
+
+
+/* Product page */
+
+/* PRODUCT FEATURES LIST */
+
+
+
+.product-features{
+
+margin-top:20px;
+
+padding-left:20px;
+
+line-height:1.7;
+
+}
+
+/* SPECIFICATIONS */
+
+.product-specs{
+
+margin-top:15px;
+
+line-height:1.8;
+
+}
+
+
+
+
+/* =============================
+   PRODUCT PAGE LAYOUT bookshelf.html 
+   HTML affected: <section class="product-page">
+   ============================= */
+
+/* PRODUCT PAGE LAYOUT */
+
+.product-page{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:60px;
+
+padding:80px 60px;
+
+align-items:center;
+
+}
+
+/* Product Image */
+
+/* PRODUCT GALLERY LAYOUT */
+
+.product-gallery{
+
+display:flex;
+
+gap:20px;
+
+align-items:flex-start;
+
+}
+
+/* Thumbnails column */
+
+.thumbnail-images{
+
+display:flex;
+
+flex-direction:column;
+
+gap:10px;
+
+}
+
+/* Thumbnail images */
+
+.thumbnail-images img{
+
+width:70px;
+
+cursor:pointer;
+
+border-radius:5px;
+
+border:1px solid #ddd;
+
+}
+
+.thumbnail-images img{
+cursor:pointer;
+}
+
+.thumbnail-images img{
+cursor:pointer;
+}
+
+.thumbnail-images img{
+
+width:70px;
+
+border-radius:6px;
+
+border:2px solid transparent;
+
+transition: border 0.2s ease;
+
+}
+
+.thumbnail-images img:hover{
+
+border:2px solid #B79562;
+
+}
+
+/* Main product image */
+
+.main-image{
+overflow:hidden;
+border-radius:10px;
+}
+
+/* MAIN PRODUCT IMAGE */
+
+.main-image img{
+
+width:450px;
+
+transition: transform 0.4s ease;
+
+cursor: zoom-in;
+
+}
+
+/* ZOOM EFFECT */
+
+.main-image:hover img{
+
+transform: scale(1.15);
+
+}
+
+
+/* Product Details */
+
+.product-details h2{
+
+font-size:32px;
+
+margin-bottom:15px;
+
+}
+
+.price {
+  margin: 10px 0;
+  color: #777;
+  font-size: 16px;
+}
+
+.related-products{
+
+padding:80px 60px;
+
+}
+
+.related-products h2{
+
+margin-bottom:30px;
+
+}
+
+
+/* PRODUCT INFO SECTION */
+
+/* Info */
+.product-info h3 {
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+/* Section titles */
+
+.product-info h3{
+
+margin-bottom:20px;
+
+font-size:22px;
+
+}
+
+/* Feature list */
+
+.features ul{
+
+padding-left:20px;
+
+line-height:1.8;
+
+}
+
+/* Specification text */
+
+.specifications p{
+
+margin-bottom:10px;
+
+}
+
+
+/* =============================
+LOGO
+HTML affected: <a class="logo"> and logo image
+============================= */
+
+.logo img {
+height: 30px;
+width: auto;
+max-width: 220px;
+display: block;
+
+/* makes SVG render sharper */
+shape-rendering: geometricPrecision;
+
+/* improves text rendering */
+text-rendering: optimizeLegibility;
+}
+
+
+/* BREADCRUMB NAVIGATION */
+
+.breadcrumb{
+
+padding:20px 60px;
+
+font-size:14px;
+
+color:#666;
+
+}
+
+.breadcrumb a{
+
+text-decoration:none;
+
+color:var(--cenova-primary);
+
+}
+
+.breadcrumb a:hover{
+
+text-decoration:underline;
+
+}
+
+.breadcrumb span{
+
+margin:0 8px;
+
+}
+
+
+/* 🔥 FORCE FIX BUTTON TEXT ISSUE */
+
+.details-button,
+.amazon-button{
+
+color: white !important;
+font-size: 14px !important;
+
+display: inline-block;
+text-align: center;
+
+}
+
+/* specific colors */
+.details-button{
+color: #15253F !important;
+background-color: transparent;
+border: 1px solid #B79562;
+}
+
+.amazon-button{
+background-color: #B79562;
+color: white !important;
+}
+
+
+.contact-section {
+  padding: 80px 60px;
+  background: #fff;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* LEFT */
+.contact-info h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.contact-details p {
+  margin: 10px 0;
+}
+
+/* RIGHT FORM */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-family: inherit;
+}
+
+.contact-form textarea {
+  height: 120px;
+}
+
+.contact-form button {
+  background: #B79562;
+  color: white;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  opacity: 0.85;
+}
+
+
+
+
+
+
+
+
