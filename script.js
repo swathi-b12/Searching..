@@ -69,5 +69,4 @@ setInterval(nextSlide, 4000);
 
 
 document.addEventListener("DOMContentLoaded", function () {
-  updateSlide(0);
 });
