@@ -65,8 +65,7 @@ menuItems.forEach((item, index) => {
 /* ===== Auto Slide ===== */
 setInterval(nextSlide, 4000);
 
-/* ===== Init ===== */
-updateSlide(0);
+
 
 
 document.addEventListener("DOMContentLoaded", function () {
