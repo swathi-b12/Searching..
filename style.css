@@ -125,6 +125,14 @@ section{
 padding:100px 80px;
 }
 
+.hero {
+  background-image: url("images/house.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+
+
 
 /* Product grid layout
    HTML affected: <div class="product-grid"> */
