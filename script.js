@@ -16,9 +16,16 @@ const nextBtn = document.querySelector(".next");
 function updateSlide(index) {
   currentSlide = index;
 
+  // Set background
   hero.style.backgroundImage = `url(${slides[index].image})`;
+
+  // 👇 FORCE REPAINT (THIS FIXES YOUR ISSUE)
+  hero.offsetHeight;
+
+  // Update title
   title.textContent = slides[index].title;
 
+  // Update menu
   menuItems.forEach(item => item.classList.remove("active"));
   menuItems[index].classList.add("active");
 }
