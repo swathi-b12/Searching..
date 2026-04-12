@@ -67,3 +67,8 @@ setInterval(nextSlide, 4000);
 
 /* ===== Init ===== */
 updateSlide(0);
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  updateSlide(0);
+});
